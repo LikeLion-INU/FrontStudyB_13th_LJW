@@ -1,83 +1,82 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .calculator {
-    width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    background: #f4f4f4;
-
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f4f4f4;
 }
 
 .display {
-    width: 100%;
-    height: 30px;
-    box-sizing: border-box;
-    font-size: 2em;
-    text-align: right;
-    padding: 20px 10px 20px 10px;
-    background: #fff;
-    border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  font-size: 2em;
+  text-align: right;
+  padding: 20px 10px 20px 10px;
+  background: #fff;
+  border-radius: 5px;
 }
 
 .delete {
-    background: #4b40402f;
-    color: white;
+  background: #4b40402f;
+  color: white;
 }
 
 .calcbuttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding-top: 10px;
 }
 
 button {
-    padding: 20px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background: #fff;
-    transition: background-color 0.2s;
+  padding: 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #fff;
+  transition: background-color 0.2s;
 
-    &:hover {
-        background: #dfe2df;
-    }
+  &:hover {
+    background: #dfe2df;
+  }
 }
 
-
 .operator {
-    background: #f8a51d;
-    color: white;
+  background: #f8a51d;
+  color: white;
 
-    &:hover {
-        background: #e59400;
-    }
+  &:hover {
+    background: #e59400;
+  }
 }
 
 .equals {
-    background: #4CAF50;
-    color: white;
+  background: #4caf50;
+  color: white;
 
-    &:hover {
-        background: #45a049;
-    }
+  &:hover {
+    background: #45a049;
+  }
 }
 
 .clear {
-    background: #ff4444;
-    color: white;
+  background: #ff4444;
+  color: white;
 
-    &:hover {
-        background: #ff0000;
-    }
+  &:hover {
+    background: #ff0000;
+  }
+  grid-column: span 2;
 }
 
 .zero {
-    grid-column: span 3;
-} 
+  grid-column: span 3;
+}
