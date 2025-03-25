@@ -2,39 +2,77 @@ const 디스플레이입력받는곳 = document.querySelector(".display");
 let 현재계산식 = "0";
 let 화면초기화필요 = false;
 let 마지막입력이연산자 = false;
-
 // 계산 함수
 function 계산() {
-  try {
-    // 연산자 변환 (×, ÷, %)
-    let 식 = 현재계산식.replace(/×/g, "*").replace(/÷/g, "/");
-
-    // % 연산자 처리
-    if (식.includes("%")) {
-      식 = 퍼센트처리(식);
+  // 연산자 변환 (×, ÷)
+  let 식 = "";
+  for (let i = 0; i < 현재계산식.length; i++) {
+    switch (현재계산식[i]) {
+      case "×":
+        식 += "*";
+        break;
+      case "÷":
+        식 += "/";
+        break;
+      default:
+        식 += 현재계산식[i];
+        break;
     }
-
-    // 0으로 나누기 검사
-    if (식.includes("/0")) {
-      throw new Error("0으로 나눌 수 없습니다!");
-    }
-
-    // 계산 실행
-    const 결과 = eval(식);
-
-    // 결과가 유효한지 확인
-    if (!isFinite(결과)) {
-      throw new Error("계산 결과가 유효하지 않습니다.");
-    }
-
-    현재계산식 = 결과.toString();
-    화면업데이트();
-  } catch (에러) {
-    alert(에러.message || "잘못된 수식입니다!");
-    현재계산식 = "0";
-    화면업데이트();
   }
+
+  // % 연산자 처리
+  if (식.includes("%")) {
+    식 = 퍼센트처리(식);
+  }
+
+  // 0으로 나누기 검사
+  if (식.includes("/0")) {
+    alert("0으로 나눌 수 없습니다!");
+  }
+
+  // 계산 실행
+  const 결과 = eval(식);
+
+  // 결과가 유효한지 확인
+  if (!isFinite(결과)) {
+    throw new Error("계산 결과가 유효하지 않습니다.");
+  }
+
+  현재계산식 = 결과.toString();
+  화면업데이트();
 }
+// // 계산 함수
+// function 계산() {
+//   try {
+//     // 연산자 변환 (×, ÷, %)
+//     let 식 = 현재계산식.replace(/×/g, "*").replace(/÷/g, "/");
+
+//     // % 연산자 처리
+//     if (식.includes("%")) {
+//       식 = 퍼센트처리(식);
+//     }
+
+//     // 0으로 나누기 검사
+//     if (식.includes("/0")) {
+//       throw new Error("0으로 나눌 수 없습니다!");
+//     }
+
+//     // 계산 실행
+//     const 결과 = eval(식);
+
+//     // 결과가 유효한지 확인
+//     if (!isFinite(결과)) {
+//       throw new Error("계산 결과가 유효하지 않습니다.");
+//     }
+
+//     현재계산식 = 결과.toString();
+//     화면업데이트();
+//   } catch (에러) {
+//     alert(에러.message || "잘못된 수식입니다!");
+//     현재계산식 = "0";
+//     화면업데이트();
+//   }
+// }
 
 // % 연산자 처리 함수
 function 퍼센트처리(식) {
