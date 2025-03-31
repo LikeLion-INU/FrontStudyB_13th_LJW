@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사자 이미지 갤러리</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Axios CDN 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>사자 이미지 갤러리</h1>
+      <p class="description">
+        Postman Mock Server에서 사자 이미지를 가져옵니다
+      </p>
+
+      <div class="controls">
+        <button id="loadImagesBtn">이미지 불러오기</button>
+      </div>
+
+      <div id="imageGallery" class="gallery">
+        <!-- 여기에 이미지가 표시됩니다 -->
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
