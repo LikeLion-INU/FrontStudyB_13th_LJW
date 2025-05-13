@@ -1,0 +1,33 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "리액트 시작하기",
+        "content": "리액트는 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리입니다.",
+        "author": "김개발",
+        "date": "2023-09-01",
+        "comments": [
+          { "id": 1, "content": "정말 유익한 글이네요!", "author": "이코딩", "date": "2023-09-02" },
+          { "id": 2, "content": "리액트 재미있죠!", "author": "박프론트", "date": "2023-09-03" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Styled Components 사용법",
+        "content": "Styled Components는 React 컴포넌트 시스템에 CSS를 적용하는 방법 중 하나입니다.",
+        "author": "이디자인",
+        "date": "2023-09-05",
+        "comments": []
+      },
+      {
+        "id": 3,
+        "title": "커스텀 훅 만들기",
+        "content": "리액트 훅을 사용하여 재사용 가능한 로직을 추출하는 방법을 알아봅니다.",
+        "author": "박프론트",
+        "date": "2023-09-10",
+        "comments": [
+          { "id": 3, "content": "커스텀 훅 좋아요!", "author": "최리액트", "date": "2023-09-11" }
+        ]
+      }
+    ]
+  }
